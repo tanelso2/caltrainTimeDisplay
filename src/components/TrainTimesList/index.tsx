@@ -19,7 +19,7 @@ export class TrainTimesList extends React.Component<TrainTimesList.Props, TrainT
         const routeList = this.props.timesList;
         const hour = time.getHours();
         const minute = time.getMinutes();
-        const maxSize = 6;
+        const maxSize = routeList.length;
         const upcomingTimes: TrainRoute[] = [];
         const idx = routeList.findIndex(route => {
             const startHour = route.startTime.hour;
